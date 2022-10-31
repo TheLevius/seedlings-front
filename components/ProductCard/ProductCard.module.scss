@@ -1,0 +1,53 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 288px;
+    margin: 0 auto 8px;
+    padding: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #bcbcbc;
+    
+    .imgContainer {
+        grid-column: span 1;
+        grid-row: span 1;
+        background-color: #747474;
+    }
+    .contentContainer {
+        grid-column: span 2;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 16px;
+        white-space: nowrap;
+        h3 {
+            padding: 0;
+            margin: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(0, 0, 0, 0.4)
+        }
+        .additionalInfo {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 16px;
+            .propertyKey {
+                font-size: 10px;
+                line-height: 1.2;
+                color:rgba(0, 0, 0, 0.2);
+                letter-spacing: 0.5px;
+            }
+            .propertyValue {
+                font-size: 12px;
+                line-height: 20px;
+                color:rgba(0, 0, 0, 0.4);
+                letter-spacing: 0.5px;
+            }
+            .priceValue {
+                font-size: 16px;
+            }
+        }
+    }
+}

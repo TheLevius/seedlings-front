@@ -13,9 +13,10 @@ export type ProductItem = {
     amount: number;
     pictures: Img[];
 }
+const blackberriesVariety = ['Prime-Ark Freedom', 'Natchez', 'Karaka Black'];
 
 const productItem: ProductItem = {
-    varietyName: 'Prime Arc Freedom',
+    varietyName: blackberriesVariety[0],
     categoryName: 'Berries',
     age: 20,
     price: 99.99,
@@ -28,9 +29,11 @@ const productItem: ProductItem = {
     ],
 }
 
+export type Berries = 'Blueberry' | 'Blackberry' | 'Raspberry' | 'Strawberry';
+
 export type CategoryItem = {
     products: ProductItem[],
-    categoryName: string,
+    categoryName: Berries,
 }
 
 const categoryItem: CategoryItem = {
