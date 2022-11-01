@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { Category } from './Category/Category'
 
 type Img = {
@@ -13,23 +13,10 @@ export type ProductItem = {
     amount: number;
     pictures: Img[];
 }
-const blackberriesVariety = ['Prime-Ark Freedom', 'Natchez', 'Karaka Black'];
+const blackberryVarieties = ['Prime-Ark Freedom', 'Natchez', 'Karaka Black'];
 
-const productItem: ProductItem = {
-    varietyName: blackberriesVariety[0],
-    categoryName: 'Berries',
-    age: 20,
-    price: 99.99,
-    amount: 5,
-    pictures: [
-        {
-            src: '',
-            alt: '',
-        },
-    ],
-}
-
-export type Berries = 'Blueberry' | 'Blackberry' | 'Raspberry' | 'Strawberry';
+const berries = ['Blueberry', 'Blackberry', 'Strawberry', 'Cowberry', 'Raspberry', 'Cranberry'] as const;
+export type Berries = typeof berries[number];
 
 export type CategoryItem = {
     products: ProductItem[],
@@ -37,14 +24,54 @@ export type CategoryItem = {
 }
 
 const categoryItem: CategoryItem = {
-    products: [productItem, productItem, productItem],
+    products: [
+        {
+            varietyName: blackberryVarieties[0],
+            categoryName: 'Berries',
+            age: 20,
+            price: 99.99,
+            amount: 5,
+            pictures: [
+                {
+                    src: '',
+                    alt: '',
+                },
+            ],
+        },
+        {
+            varietyName: blackberryVarieties[1],
+            categoryName: 'Berries',
+            age: 20,
+            price: 99.99,
+            amount: 8,
+            pictures: [
+                {
+                    src: '',
+                    alt: '',
+                },
+            ],
+        },
+        {
+            varietyName: blackberryVarieties[2],
+            categoryName: 'Berries',
+            age: 20,
+            price: 99.99,
+            amount: 0,
+            pictures: [
+                {
+                    src: '',
+                    alt: '',
+                },
+            ],
+        }
+    ],
     categoryName: 'Blueberry'
 };
 
-
-const categories: CategoryItem[] = [categoryItem]
+const categories: CategoryItem[] = [categoryItem, categoryItem, categoryItem]
 
 export const Categories: FC = () => {
+
     return <div>
         <h2>Categories</h2>
         {

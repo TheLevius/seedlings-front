@@ -1,9 +1,12 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-}
+} */
 
 a {
   color: inherit;
@@ -14,7 +17,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -22,4 +25,4 @@ a {
     color: white;
     background: #000000;
   }
-}
+} */

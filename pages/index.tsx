@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Catalog } from '../components/Catalog/Catalog';
+import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header'
 import styles from '../styles/Home.module.css'
 
@@ -13,6 +14,7 @@ export default function Home() {
             </Head>
             <Header />
             <Catalog />
+            <Footer />
         </div>
     )
 }
